@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 /*class Counter extends Component {
     
     render() { 
@@ -7,8 +7,14 @@ import React, { Component } from 'react';
 }*/
 
 function Counter(){
+    
+    const[count, setCount]=useState('0');
+    
     return(
-        <h1>Hello World </h1>
+        <React.Fragment>
+            <span> {count} </span>
+            <button onClick = {()=>setCount(count+1)} >Increment</button>
+        </React.Fragment>
     );
 }
  
